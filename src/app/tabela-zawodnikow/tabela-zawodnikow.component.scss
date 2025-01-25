@@ -1,0 +1,23 @@
+// Kontener dla tabeli, który zawiera tabelę
+.table-container {
+    display: flex;
+    justify-content: center; // Centruje tabelę w poziomie
+    width: 100%; // Kontener rozciąga się na całą szerokość
+  }
+  
+  table {
+    width: 50%; // Ogranicza szerokość tabeli do 50% kontenera
+    margin: auto; // Automatyczne marginesy do wyśrodkowania tabeli w kontenerze
+    border-collapse: collapse; // Usuwa podwójne linie między komórkami
+  }
+  
+  th, td {
+    border: 1px solid #ccc; // Dodaje obramowanie do komórek
+    padding: 8px; // Padding dla treści komórek
+    text-align: left; // Wyrównanie tekstu do lewej
+  }
+  
+  th {
+    background-color: #f2f2f2; // Tło dla nagłówków tabeli
+  }
+  

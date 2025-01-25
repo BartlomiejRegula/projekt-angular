@@ -1,0 +1,66 @@
+.formularz1-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+// Stylizacja grupy formularza
+.form-group1 {
+  width: 45%;
+  margin-bottom: 15px; // Odległość między grupami
+}
+
+
+// Stylizacja etykiet
+label {
+  display: block; // Etykieta nad polem
+  margin-bottom: 5px; // Odległość między etykietą a polem
+  font-weight: bold;
+}
+
+// Stylizacja pól formularza
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%; // Pełna szerokość dla spójności
+  padding: 12px; // Większy padding dla lepszego komfortu
+  margin-top: 4px; // Oddziela input od etykiety
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; // Większa czcionka dla lepszej czytelności
+}
+
+// Stylizacja przycisku
+.formularz1-container button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formularz1-container button:hover {
+  background-color: #0056b3;
+}
+
+.is-invalid {
+  border: 2px solid red;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+

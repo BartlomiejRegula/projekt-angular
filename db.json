@@ -1,0 +1,13 @@
+{
+  "zawodnicy": [
+    {
+      "id": "58e6",
+      "imieINazwisko": "bartek",
+      "pseudonim": "lhkjhkj",
+      "wygraneWalki": 2,
+      "kategoriaWagowa": "lekka",
+      "aktywny": false,
+      "dataPierwszejWalki": "2025-01-09"
+    }
+  ]
+}

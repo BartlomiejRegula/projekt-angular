@@ -1,0 +1,107 @@
+<!-- <form (ngSubmit)="wyslijFormularz()">
+    <label for="najdluzszaWalka">Najdłuższa walka (w sekundach):</label>
+    <input
+      type="number"
+      id="najdluzszaWalka"
+      [(ngModel)]="formData.najdluzszaWalka"
+      name="najdluzszaWalka"
+      min="0"
+      required
+    />
+    <br /><br />
+  
+    <label for="mistrzostwo">Czy zdobyłeś mistrzostwo?</label>
+    <input
+      type="checkbox"
+      id="mistrzostwo"
+      [(ngModel)]="formData.mistrzostwo"
+      name="mistrzostwo"
+    />
+    <br /><br />
+  
+    <label for="najsilniejszyPrzeciwnik">Najsilniejszy pokonany przeciwnik:</label>
+    <input
+      type="text"
+      id="najsilniejszyPrzeciwnik"
+      [(ngModel)]="formData.najsilniejszyPrzeciwnik"
+      name="najsilniejszyPrzeciwnik"
+      pattern="^[a-zA-Z\s]+$"
+      required
+    />
+    <br /><br />
+  
+    <label for="najdluzszyStreak">Najdłuższy streak wygranych:</label>
+    <input
+      type="range"
+      id="najdluzszyStreak"
+      [(ngModel)]="formData.najdluzszyStreak"
+      name="najdluzszyStreak"
+      min="0"
+      max="100"
+    />
+    <span>{{ formData.najdluzszyStreak }}</span>
+    <br /><br />
+  
+    <label for="ranking">Najwyższe miejsce w rankingu:</label>
+    <select
+      id="ranking"
+      [(ngModel)]="formData.ranking"
+      name="ranking"
+      required
+    >
+      <option value="" disabled selected>Wybierz miejsce</option>
+      <option value="top10">Top 10</option>
+      <option value="top20">Top 20</option>
+      <option value="top30">Top 30</option>
+      <option value="pozaRankingiem">Poza rankingiem</option>
+    </select>
+    <br /><br />
+  
+    <label for="dataKariery">Początek kariery:</label>
+    <input
+      type="date"
+      id="dataKariery"
+      [(ngModel)]="formData.dataKariery"
+      name="dataKariery"
+      required
+    />
+    <br /><br />
+  
+    <button type="submit">Wyślij</button>
+  </form>
+   -->
+   <form (ngSubmit)="wyslijFormularz()" class="formularz3-container">
+    <label>Najdłuższa walka (w sekundach):</label>
+    <input type="number" [(ngModel)]="formData.dlugoscWalki" name="dlugoscWalki" min="0" required />
+  
+    <label>Czy zdobyłeś mistrzostwo?</label>
+    <input type="checkbox" [(ngModel)]="formData.czyMistrzostwo" name="czyMistrzostwo" />
+  
+    <label>Najsilniejszy pokonany przeciwnik:</label>
+    <input
+      type="text"
+      [(ngModel)]="formData.przeciwnik"
+      name="przeciwnik"
+      required
+      pattern="[a-zA-Z\s]+"
+      title="Dozwolone są tylko litery i spacje."
+    />
+  
+    <label>Najdłuższy streak wygranych:</label>
+    <input type="range" [(ngModel)]="formData.streak" name="streak" min="0" max="100" />
+  
+    <label>Najwyższe miejsce w rankingu:</label>
+    <select [(ngModel)]="formData.miejsceWRankingu" name="miejsceWRankingu" required>
+      <option value="" disabled selected>Wybierz miejsce</option>
+      <option value="top10">Top 10</option>
+      <option value="top20">Top 20</option>
+      <option value="top30">Top 30</option>
+      <option value="pozaRankingiem">Poza rankingiem</option>
+    </select>
+  
+    <label>Początek kariery:</label>
+    <input type="date" [(ngModel)]="formData.poczatekKariery" name="poczatekKariery" required />
+  
+    <button type="submit">Wyślij</button>
+  </form>
+  

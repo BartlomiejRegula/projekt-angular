@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Imię i Nazwisko</th>
+      <th>Pseudonim</th>
+      <th>Wygrane Walki</th>
+      <th>Kategoria Wagowa</th>
+      <th>Aktywny</th>
+      <th>Data Pierwszej Walki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let zawodnik of zawodnicy">
+      <td>{{ zawodnik.imieINazwisko }}</td>
+      <td>{{ zawodnik.pseudonim }}</td>
+      <td>{{ zawodnik.wygraneWalki }}</td>
+      <td>{{ zawodnik.kategoriaWagowa }}</td>
+      <td>{{ zawodnik.aktywny ? 'Tak' : 'Nie' }}</td>
+      <td>{{ zawodnik.dataPierwszejWalki }}</td>
+    </tr>
+  </tbody>
+</table>

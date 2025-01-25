@@ -1,0 +1,13 @@
+<app-tabela-zawodnikow [zawodnicy]="zawodnicy"></app-tabela-zawodnikow>
+<app-formularz1 (zawodnikDodany)="dodajZawodnika($event)"></app-formularz1>
+
+<div class="button-container">
+  <button (click)="pokazFormularz('formularz2')">Pokaż Formularz 2</button>
+  <button (click)="pokazFormularz('formularz3')">Pokaż Formularz 3</button>
+</div>
+<div *ngIf="widocznyFormularz === 'formularz2'">
+  <app-formularz2></app-formularz2>
+</div>
+<div *ngIf="widocznyFormularz === 'formularz3'">
+  <app-formularz3></app-formularz3>
+</div>

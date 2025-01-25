@@ -1,0 +1,97 @@
+<!-- <form (ngSubmit)="wyslij()" class="formularz2-container">
+    <label for="zawodnik">Z którym zawodnikiem chciałbyś zawalczyć?</label>
+    <input type="text" id="zawodnik" [(ngModel)]="formData.zawodnik" name="zawodnik" required />
+    
+    <p>Jakie zwierzęta uważasz za słabe?</p>
+    <div class="checkbox-group">
+      <input type="checkbox" id="szczur" name="animal" value="Szczur">
+      <label for="szczur">Szczur</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="goryl" name="animal" value="Goryl">
+      <label for="goryl">Goryl</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="kangur" name="animal" value="Kangur">
+      <label for="kangur">Kangur</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="slon" name="animal" value="Słoń">
+      <label for="slon">Słoń</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="tygrys" name="animal" value="Tygrys">
+      <label for="tygrys">Tygrys</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="krowa" name="animal" value="Krowa">
+      <label for="krowa">Krowa</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="pies" name="animal" value="Pies">
+      <label for="pies">Pies</label>
+    </div>
+    <br>
+    <label for="czasWalki">Czas walki (w sekundach):</label>
+    <input type="number" id="czasWalki" [(ngModel)]="formData.czasWalki" name="czasWalki" min="0" required />
+    
+  
+    <label for="bron">Ulubiona broń:</label>
+    <select id="bron" [(ngModel)]="formData.bron" name="bron" required>
+      <option value="">Wybierz broń</option>
+      <option value="Miecz">Miecz</option>
+      <option value="Łuk">Łuk</option>
+      <option value="Kij">Kij</option>
+      <option value="Topór">Topór</option>
+    </select>
+  
+    <p>Preferujesz walkę z gorylami?</p>
+    <div class="checkbox-group">
+      <label><input type="radio" [(ngModel)]="formData.preferujeGoryle" name="preferujeGoryle" [value]="true" /> Tak</label>
+      <label><input type="radio" [(ngModel)]="formData.preferujeGoryle" name="preferujeGoryle" [value]="false" /> Nie</label>
+    </div>
+    
+    <label for="przygotowanie">Poziom przygotowania (1-100):</label>
+    <input type="range" id="przygotowanie" [(ngModel)]="formData.przygotowanie" name="przygotowanie" min="1" max="100" />
+    
+    <button type="submit">Wyślij</button>
+  </form>
+   -->
+  <form (ngSubmit)="wyslijFormularz()" class="formularz2-container">
+    <label>Z którym zawodnikiem chciałbyś zawalczyć:</label>
+    <input type="text" [(ngModel)]="formData.zawodnik" name="zawodnik" required />
+    
+    <label>Jakie zwierzęta uważasz za słabe?</label>
+    <div>
+      <input type="checkbox" [(ngModel)]="formData.zwierzeta.szczur" name="zwierzeta.szczur" /> Szczur
+      <input type="checkbox" [(ngModel)]="formData.zwierzeta.goryl" name="zwierzeta.goryl" /> Goryl
+      <input type="checkbox" [(ngModel)]="formData.zwierzeta.kangur" name="zwierzeta.kangur" /> Kangur
+      <input type="checkbox" [(ngModel)]="formData.zwierzeta.slon" name="zwierzeta.slon" /> Słoń
+      <input type="checkbox" [(ngModel)]="formData.zwierzeta.tygrys" name="zwierzeta.tygrys" /> Tygrys
+      <input type="checkbox" [(ngModel)]="formData.zwierzeta.krowa" name="zwierzeta.krowa" /> Krowa
+      <input type="checkbox" [(ngModel)]="formData.zwierzeta.pies" name="zwierzeta.pies" /> Pies
+    </div>
+  
+    <label>Czas walki (w sekundach):</label>
+    <input type="number" [(ngModel)]="formData.czasWalki" name="czasWalki" min="0" required />
+  
+    <label>Ulubiona broń:</label>
+    <select [(ngModel)]="formData.ulubionaBron" name="ulubionaBron" required>
+      <option value="" disabled selected>Wybierz broń</option>
+      <option value="Miecz">Miecz</option>
+      <option value="Topór">Topór</option>
+      <option value="Łuk">Łuk</option>
+    </select>
+  
+    <label>Preferuje walki z gorylami?</label>
+    <div>
+      <label><input type="radio" [(ngModel)]="formData.preferujeGoryle" name="preferujeGoryle" [value]="true" /> Tak</label>
+      <label><input type="radio" [(ngModel)]="formData.preferujeGoryle" name="preferujeGoryle" [value]="false" /> Nie</label>
+    </div>
+  
+    <label>Poziom przygotowania (1-10):</label>
+    <input type="range" [(ngModel)]="formData.poziomPrzygotowania" name="poziomPrzygotowania" min="1" max="10" />
+  
+    <button type="submit">Wyślij</button>
+  </form>
+  
