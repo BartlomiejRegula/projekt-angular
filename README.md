@@ -1,5 +1,17 @@
 # Walki
 
+you need to run: 
+```bash
+npm install
+```
+to use the api you need to run:
+```bash
+npm install -g json-server
+json-server --watch db.json
+```
+
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.2.
 
 ## Development server
